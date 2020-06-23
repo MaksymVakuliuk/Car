@@ -3,11 +3,9 @@ package service;
 import model.CarWheel;
 
 public interface CarWheelService {
-    public CarWheel getCarWheel();
+    double changeToNew(CarWheel carWheel);
 
-    public double changeToNew();
+    double eraseWheel(CarWheel carWheel, double delta);
 
-    public double eraseWheel(double delta);
-
-    public String printToConsole();
+    String printToConsole(CarWheel carWheel);
 }

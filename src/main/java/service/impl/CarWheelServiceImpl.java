@@ -4,25 +4,14 @@ import model.CarWheel;
 import service.CarWheelService;
 
 public class CarWheelServiceImpl implements CarWheelService {
-    private CarWheel carWheel;
-
-    public CarWheelServiceImpl(CarWheel carWheel) {
-        this.carWheel = carWheel;
-    }
-
     @Override
-    public CarWheel getCarWheel() {
-        return carWheel;
-    }
-
-    @Override
-    public double changeToNew() {
+    public double changeToNew(CarWheel carWheel) {
         carWheel = new CarWheel();
         return carWheel.getTyreWearCondition();
     }
 
     @Override
-    public double eraseWheel(double delta) {
+    public double eraseWheel(CarWheel carWheel, double delta) {
         if (delta / 100 > carWheel.getTyreWearCondition()) {
             throw new RuntimeException("Error wheel not have enough expected life ");
         }
@@ -31,7 +20,7 @@ public class CarWheelServiceImpl implements CarWheelService {
     }
 
     @Override
-    public String printToConsole() {
+    public String printToConsole(CarWheel carWheel) {
         String output = carWheel.toString();;
         System.out.println(output);
         return output;

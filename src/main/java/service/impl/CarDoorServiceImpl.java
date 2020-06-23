@@ -4,55 +4,44 @@ import model.CarDoor;
 import service.CarDoorService;
 
 public class CarDoorServiceImpl implements CarDoorService {
-    private final CarDoor carDoor;
-
-    public CarDoorServiceImpl(CarDoor carDoor) {
-        this.carDoor = carDoor;
-    }
-
     @Override
-    public CarDoor getCarDoor() {
-        return carDoor;
-    }
-
-    @Override
-    public boolean openDoor() {
+    public boolean openDoor(CarDoor carDoor) {
         carDoor.setOpenDoor(true);
         return carDoor.isOpenDoor();
     }
 
     @Override
-    public boolean closeDoor() {
+    public boolean closeDoor(CarDoor carDoor) {
         carDoor.setOpenDoor(false);
         return carDoor.isOpenDoor();
     }
 
     @Override
-    public boolean changeDoorStatus() {
+    public boolean changeDoorStatus(CarDoor carDoor) {
         carDoor.setOpenDoor(!carDoor.isOpenDoor());
         return carDoor.isOpenDoor();
     }
 
     @Override
-    public boolean openWindow() {
+    public boolean openWindow(CarDoor carDoor) {
         carDoor.setOpenWindow(true);
         return carDoor.isOpenWindow();
     }
 
     @Override
-    public boolean closeWindow() {
+    public boolean closeWindow(CarDoor carDoor) {
         carDoor.setOpenWindow(false);
         return carDoor.isOpenWindow();
     }
 
     @Override
-    public boolean changeWindowStatus() {
+    public boolean changeWindowStatus(CarDoor carDoor) {
         carDoor.setOpenWindow(!carDoor.isOpenWindow());
         return carDoor.isOpenWindow();
     }
 
     @Override
-    public String printToConsole() {
+    public String printToConsole(CarDoor carDoor) {
         return carDoor.toString();
     }
 }

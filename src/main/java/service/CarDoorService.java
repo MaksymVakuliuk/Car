@@ -3,19 +3,17 @@ package service;
 import model.CarDoor;
 
 public interface CarDoorService {
-    public CarDoor getCarDoor();
+    boolean openDoor(CarDoor carDoor);
 
-    public boolean openDoor();
+    boolean closeDoor(CarDoor carDoor);
 
-    public boolean closeDoor();
+    boolean changeDoorStatus(CarDoor carDoor);
 
-    public boolean changeDoorStatus();
+    boolean openWindow(CarDoor carDoor);
 
-    public boolean openWindow();
+    boolean closeWindow(CarDoor carDoor);
 
-    public boolean closeWindow();
+    boolean changeWindowStatus(CarDoor carDoor);
 
-    public boolean changeWindowStatus();
-
-    public String printToConsole();
+    String printToConsole(CarDoor carDoor);
 }

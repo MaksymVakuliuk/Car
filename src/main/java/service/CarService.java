@@ -6,25 +6,23 @@ import model.CarDoor;
 import model.CarWheel;
 
 public interface CarService {
-    Car getCar();
+    double changeCurrentSpeed(Car car, double newSpeed);
 
-    double changeCurrentSpeed(double newSpeed);
+    int putPersonInCar(Car car);
 
-    int putPersonInCar();
+    int evictPersonFromCar(Car car);
 
-    int evictPersonFromCar();
+    int evictAllPersonsFromCar(Car car);
 
-    int evictAllPersonsFromCar();
+    CarDoor getCarDoorByIndex(Car car, int index);
 
-    CarDoor getCarDoorByIndex(int index);
+    CarWheel getCarWheelByIndex(Car car, int index);
 
-    CarWheel getCarWheelByIndex(int index);
+    int removeAllWheelsFromCar(Car car);
 
-    int removeAllWheelsFromCar();
+    List<CarWheel> installWheelsOnCar(Car car, int numberOfNewCarWheels);
 
-    List<CarWheel> installWheelsOnCar(int numberOfNewCarWheels);
+    double calculateMaxSpeed(Car car);
 
-    double calculateMaxSpeed();
-
-    String printToConsole();
+    String printToConsole(Car car);
 }

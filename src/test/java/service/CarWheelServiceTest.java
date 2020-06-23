@@ -1,38 +1,38 @@
 package service;
 
 import model.CarWheel;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import service.impl.CarWheelServiceImpl;
 
-import static org.junit.Assert.*;
-
 public class CarWheelServiceTest {
     private static final double DELTA = 0.0001;
-    private CarWheelService carWheelService;
+    private final CarWheelService carWheelService = new CarWheelServiceImpl();
+    private CarWheel carWheel;
 
     @Before
     public void setUp() throws Exception {
-        carWheelService = new CarWheelServiceImpl(new CarWheel());
+        carWheel = new CarWheel();
     }
 
     @Test
     public void changeToNew() {
-        carWheelService.getCarWheel().setTyreWearCondition(0.74);
-        assertEquals(1.0, carWheelService.changeToNew(), DELTA);
+        carWheel.setTyreWearCondition(0.74);
+        Assert.assertEquals(1.0, carWheelService.changeToNew(carWheel), DELTA);
     }
 
     @Test
     public void eraseWheel() {
-        assertEquals(0.80, carWheelService.eraseWheel(20), DELTA);
+        Assert.assertEquals(0.80, carWheelService.eraseWheel(carWheel,20), DELTA);
     }
 
     @Test
     public void printToConsole() {
         String expected1 = "CarWheel(tyreWearCondition=1.0)";
         String expected2 = "CarWheel(tyreWearCondition=0.8)";
-        assertEquals(expected1, carWheelService.printToConsole());
-        carWheelService.eraseWheel(20);
-        assertEquals(expected2, carWheelService.printToConsole());
+        Assert.assertEquals(expected1, carWheelService.printToConsole(carWheel));
+        carWheelService.eraseWheel(carWheel, 20);
+        Assert.assertEquals(expected2, carWheelService.printToConsole(carWheel));
     }
 }
