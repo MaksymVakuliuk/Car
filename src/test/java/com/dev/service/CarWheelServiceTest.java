@@ -1,10 +1,10 @@
-package service;
+package com.dev.service;
 
-import model.CarWheel;
+import com.dev.model.CarWheel;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import service.impl.CarWheelServiceImpl;
+import com.dev.service.impl.CarWheelServiceImpl;
 
 public class CarWheelServiceTest {
     private static final double DELTA = 0.0001;

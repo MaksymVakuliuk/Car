@@ -1,9 +1,9 @@
-package service;
+package com.dev.service;
 
+import com.dev.model.Car;
+import com.dev.model.CarDoor;
+import com.dev.model.CarWheel;
 import java.util.List;
-import model.Car;
-import model.CarDoor;
-import model.CarWheel;
 
 public interface CarService {
     double changeCurrentSpeed(Car car, double newSpeed);

@@ -1,9 +1,9 @@
-package service;
+package com.dev.service;
 
-import model.CarDoor;
+import com.dev.model.CarDoor;
 import org.junit.Before;
 import org.junit.Test;
-import service.impl.CarDoorServiceImpl;
+import com.dev.service.impl.CarDoorServiceImpl;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

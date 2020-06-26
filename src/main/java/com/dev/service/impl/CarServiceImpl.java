@@ -1,10 +1,10 @@
-package service.impl;
+package com.dev.service.impl;
 
+import com.dev.model.Car;
+import com.dev.model.CarDoor;
+import com.dev.model.CarWheel;
+import com.dev.service.CarService;
 import java.util.List;
-import model.Car;
-import model.CarDoor;
-import model.CarWheel;
-import service.CarService;
 
 public class CarServiceImpl implements CarService {
     @Override

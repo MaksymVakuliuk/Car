@@ -1,7 +1,7 @@
-package service.impl;
+package com.dev.service.impl;
 
-import model.CarWheel;
-import service.CarWheelService;
+import com.dev.model.CarWheel;
+import com.dev.service.CarWheelService;
 
 public class CarWheelServiceImpl implements CarWheelService {
     @Override

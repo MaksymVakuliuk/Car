@@ -1,16 +1,16 @@
-package service;
+package com.dev.service;
 
+import com.dev.model.Car;
+import com.dev.model.CarDoor;
+import com.dev.model.CarWheel;
+import com.dev.service.impl.CarDoorServiceImpl;
+import com.dev.service.impl.CarServiceImpl;
+import com.dev.service.impl.CarWheelServiceImpl;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import model.Car;
-import model.CarDoor;
-import model.CarWheel;
 import org.junit.Before;
 import org.junit.Test;
-import service.impl.CarDoorServiceImpl;
-import service.impl.CarServiceImpl;
-import service.impl.CarWheelServiceImpl;
 import static org.junit.Assert.assertEquals;
 
 public class CarServiceTest {

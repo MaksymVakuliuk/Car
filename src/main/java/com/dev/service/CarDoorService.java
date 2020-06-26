@@ -1,6 +1,6 @@
-package service;
+package com.dev.service;
 
-import model.CarDoor;
+import com.dev.model.CarDoor;
 
 public interface CarDoorService {
     boolean openDoor(CarDoor carDoor);

@@ -1,6 +1,6 @@
-package service;
+package com.dev.service;
 
-import model.CarWheel;
+import com.dev.model.CarWheel;
 
 public interface CarWheelService {
     double changeToNew(CarWheel carWheel);
